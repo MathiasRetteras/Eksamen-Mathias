@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--linker css dokument og alt basic du trenger i ett html dokument-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <title>Dokument</title>
+</head>
+<body>
+    <!--rød tekst og feil melding fra python fila om du har skrevet inn feil passord eller brukernavn-->
+    <h1 style=" color:red;">{{msg}}</h1>
+    <!--linker til andre sider-->
+    <a href="/">Hjem</a><br>
+    <a href="/list">Vis liste</a>
+</body>
+</html>

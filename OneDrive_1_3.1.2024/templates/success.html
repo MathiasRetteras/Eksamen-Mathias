@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--linker css dokument og alt basic du trenger i ett html dokument-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <!--legger inn jQuery lokalt i koden så den personen jeg sender koden til ikke trenger å laste det ned-->
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+  <!--her connecter jeg html og js dokumentene og lager en div til confetti'en-->
+    <script src="/static/confetti.js"></script>
+    <div id="confetti"></div>
+    <h!>Python scripts</h>
+    <!--her skriver jeg ut meldingen fra python scriptet som er at det var en suksess-->
+    <h1>{{msg}}</h1>
+    <!-- Display contact info if it exists -->
+    {% if contact_info %}
+        <h2>Contact Info:</h2>
+        <p>{{contact_info}}</p>
+    {% endif %}
+    <!--linker til de andre sidene-->
+    <a href="/">Hjem</a><br>
+    <a href="/list">Registrerte brukere</a>
+</body>
+</html>

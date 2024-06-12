@@ -1,0 +1,151 @@
+/* styling for alle sider*/
+body {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    text-align:center;
+    font-size: 48px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+p {
+    font-size: 24px;
+    margin-top: 20px;
+
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 20px;
+}
+
+/*styling for logg inn/registrer knappene*/
+.login_submit {
+    font-size: 32px;
+    background: #B9DFFF;
+    color: red;
+    margin: 30px;
+    padding: 10px;
+}
+
+/*styling for tabell med registrerte brukere*/
+table {
+    width:40%;
+    margin-left: 30%;
+}
+
+/*styling for input felt*/
+input {
+    width:15%;
+    height: 60px;
+}
+
+.headerSkrift {
+    float: left;
+}
+/* New CSS for header */
+header {
+    margin-bottom: 100px;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    float: left;
+}
+
+header a {
+    margin: 0 15px;
+    color: #333333;
+}
+
+header a:hover {
+    color: #007bff;
+}
+
+/*styling for confetti effekten på "success" siden.*/
+#confetti {
+    left: 0;
+    position: fixed;
+    right: 0; 
+    top: -160px;
+    z-index: 10000;
+   }
+    
+   #confetti .ball {
+    animation-iteration-count :infinite !important;
+    -webkit-animation-iteration-count :infinite !important;
+    border-radius: 50%;
+    cursor: default;
+    display: inline-block;
+    height: 10px;
+    user-select: none; 
+    -webkit-user-select: none; 
+    width: 10px;
+   } 
+    
+   @-webkit-keyframes falling-left {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 1;}
+   }
+    
+   @keyframes falling-left {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 1;}
+   }
+    
+   #confetti .ball:nth-child(2n) {
+    -webkit-animation: falling-left linear;
+    animation: falling-left linear ;
+   }
+    
+   @-webkit-keyframes falling-right {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 0;}
+    10% { opacity: 1;}
+    20% { opacity: 0;}
+    30% { opacity: 1;}
+    40% { opacity: 0;}
+    50% { opacity: 1;}
+    60% { opacity: 0;}
+    70% { opacity: 1;}
+    80% { opacity: 0;}
+    90% { opacity: 1;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 0;}
+   }
+    
+   @keyframes falling-right {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 0;} 
+   }
+    
+   #confetti .ball:nth-of-type(2n+1) {
+    -webkit-animation: falling-right linear ;
+    animation: falling-right linear;
+   }

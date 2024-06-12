@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <title>innlogging</title>
+</head>
+<body>
+    <form action="{{url_for('login')}}" method="POST">
+        <h3>Innlogging</h3>
+        Brukernavn<br>
+        <input class="login_klasse"type="text" name="username"><br>
+        Passord<br>
+        <input class="login_klasse"type="password" name="password"></input><br>
+
+        <input class="login_submit" type="submit" value="Logg inn"><br>
+        <a href="/register">Registrer </a><br><br><br>
+
+    </form>
+    
+</body>
+</html>
